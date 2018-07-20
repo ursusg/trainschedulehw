@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container">
+
+            <br>
+
+            <!-- Title of Page -->
+            <div class="jumbotron">
+                <h1 class="text-center">Train Schedules</h1>
+                <button class="btn btn-default" id="refreshbtn" type="button">Refresh Schedule</button>
+            </div>
+
+            <!-- Table -->
+            <table class="table table-dark">
+
+                <thread>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thread>
+
+                <tbody id="trainSchedulesInput">
+                    <tr>
+                        <td scope="col">The</td>
+                        <td scope="col">Only</td>
+                        <td scope="col">Train</td>
+                        <td scope="col">Available</td>
+                        <td scope="col">5</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+                <br>
+        </div>
+
+        <!-- Form -->
+        <div class="card card-body">
+            <div class="card-heading">
+                <h3 class="card-title text-center">Add Train</h3>
+            </div>
+            <div class="card-body">
+
+                <!-- Sign-up Form (note the various input "types")-->
+                <form role="form" id="trainForm">
+                    <div class="form-group row">
+                        <label for="trainName">Train Name</label>
+                        <input class="form-control" id="trainName" type="text">
+                    </div>
+                    <div class="form-group row">
+                        <label for="destinationInput">Destination</label>
+                        <input class="form-control" id="destinationInput" type="text">
+                    </div>
+                    <div class="form-group row">
+                        <label for="firstTrainTime">First Train Time (HH:mm)</label>
+                        <input class="form-control" id="firstTrainTime" type="text">
+                    </div>
+                    <div class="form-group row">
+                        <label for="frequencyMin">Frequency (min)</label>
+                        <input class="form-control" id="frequencyMin" type="number">
+                        </input>
+                    </div>
+                    <button class="btn btn-default" id="add-train" type="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="assets/javascript/train.js"></script>
+
+
+</body>
+
+
+</html>
